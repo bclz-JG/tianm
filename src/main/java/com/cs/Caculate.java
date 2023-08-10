@@ -2,7 +2,7 @@ package com.cs;
 
 import java.util.*;
 
-public class Query {
+public class Caculate {
     public List<Integer> va() {
         Set<Integer> r = this.queryRed();
         Integer b = this.queryBlue();
