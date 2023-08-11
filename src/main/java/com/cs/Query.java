@@ -9,10 +9,12 @@ public class Query {
     String user = "root";
     String password = "123456";
 
-    public Map<Integer, Double> query() {
+    public Map<Integer, Double> query(Boolean b) {
         Map<Integer, Double> blue = new HashMap<>();
 
-        String sql = "SELECT * FROM cs_prob_blue";
+        String table = b ? "cs_prob_red" : "cs_prob_blue";
+
+        String sql = "SELECT * FROM " + table;
 
         try (Connection connection = DriverManager.getConnection(url, user, password);
              PreparedStatement statement = connection.prepareStatement(sql);

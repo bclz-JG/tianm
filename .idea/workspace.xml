@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="45642a29-0926-4c0f-8e6a-d520955366c1" name="Changes" comment="重命名">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cs/Query.java" afterDir="false" />
+    <list default="true" id="45642a29-0926-4c0f-8e6a-d520955366c1" name="Changes" comment="初步实现数据库查询">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cs/Caculate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cs/Caculate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cs/Query.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cs/Query.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +116,7 @@
       <workItem from="1691632749425" duration="751000" />
       <workItem from="1691634982370" duration="358000" />
       <workItem from="1691716610268" duration="991000" />
-      <workItem from="1691718840315" duration="3320000" />
+      <workItem from="1691718840315" duration="6773000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <created>1691633338060</created>
@@ -154,7 +153,14 @@
       <option name="project" value="LOCAL" />
       <updated>1691648340412</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="初步实现数据库查询">
+      <created>1691722209029</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1691722209029</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -174,6 +180,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Init" />
     <MESSAGE value="重命名" />
-    <option name="LAST_COMMIT_MESSAGE" value="重命名" />
+    <MESSAGE value="初步实现数据库查询" />
+    <option name="LAST_COMMIT_MESSAGE" value="初步实现数据库查询" />
   </component>
 </project>

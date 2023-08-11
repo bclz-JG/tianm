@@ -41,7 +41,7 @@ public class Caculate {
 
     private Map<Integer, Double> qBlue() {
         Query query = new Query();
-        Map<Integer, Double> map = query.query();
+        Map<Integer, Double> map = query.query(false);
         return map;
     }
 
