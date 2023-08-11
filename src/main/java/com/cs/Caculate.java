@@ -11,6 +11,7 @@ public class Caculate {
         v.add(b);
         return v;
     }
+
     private Set<Integer> queryRed() {
         Random random = new Random();
         Set<Integer> set = new HashSet<>();
@@ -27,9 +28,21 @@ public class Caculate {
     }
 
     private Integer queryBlue() {
+        Map<Integer, Double> qBlue = this.qBlue();
+        for (Map.Entry<Integer, Double> e : qBlue.entrySet()) {
+            int num = e.getKey();
+            double poss = e.getValue();
+            System.out.println(num + "->" + poss);
+        }
         Random random = new Random();
         int blue = random.nextInt(16) + 1;
         return blue;
+    }
+
+    private Map<Integer, Double> qBlue() {
+        Query query = new Query();
+        Map<Integer, Double> map = query.query();
+        return map;
     }
 
 }
