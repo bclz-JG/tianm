@@ -5,10 +5,6 @@ import java.util.*;
 
 public class Query {
 
-    String url = "jdbc:mysql://localhost:3306/tianm";
-    String user = "root";
-    String password = "123456";
-
     public Map<Integer, Double> query(Boolean b) {
         Map<Integer, Double> blue = new HashMap<>();
 
@@ -16,7 +12,7 @@ public class Query {
 
         String sql = "SELECT * FROM " + table;
 
-        try (Connection connection = DriverManager.getConnection(url, user, password);
+        try (Connection connection = DriverManager.getConnection(DBConfig.URL, DBConfig.USER, DBConfig.PWD);
              PreparedStatement statement = connection.prepareStatement(sql);
              ResultSet resultSet = statement.executeQuery()) {
 
