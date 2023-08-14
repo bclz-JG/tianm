@@ -14,6 +14,7 @@ public class Write {
             // 建立数据库连接
             Connection connection = DriverManager.getConnection(DBConfig.URL, DBConfig.USER, DBConfig.PWD);
 
+            //插入球值
             insert(connection, Public.NUMS);
 
             // 关闭资源
@@ -37,9 +38,9 @@ public class Write {
                 int rowsAffected = statement.executeUpdate();
 
                 if (rowsAffected > 0) {
-                    System.out.println("数据插入成功到表1！");
+                    System.out.println("数据插入成功！");
                 } else {
-                    System.out.println("数据插入失败到表1！");
+                    System.out.println("数据插入失败！");
                 }
                 // 关闭资源
                 statement.close();
