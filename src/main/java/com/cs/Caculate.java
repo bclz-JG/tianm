@@ -1,5 +1,7 @@
 package com.cs;
 
+import com.cs.entity.Ball;
+
 import java.util.*;
 
 public class Caculate {
@@ -28,20 +30,14 @@ public class Caculate {
     }
 
     private Integer queryBlue() {
-        Map<Integer, Double> qBlue = this.qBlue();
-        for (Map.Entry<Integer, Double> e : qBlue.entrySet()) {
-            int num = e.getKey();
-            double poss = e.getValue();
-            System.out.println(num + "->" + poss);
-        }
         Random random = new Random();
         int blue = random.nextInt(16) + 1;
         return blue;
     }
 
-    private Map<Integer, Double> qBlue() {
+    private Map<String, List<Ball>> queryRB() {
         Query query = new Query();
-        Map<Integer, Double> map = query.query(false);
+        Map<String, List<Ball>> map = query.queryRB();
         return map;
     }
 
