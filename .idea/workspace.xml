@@ -4,16 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="45642a29-0926-4c0f-8e6a-d520955366c1" name="Changes" comment="可以插入往期数据">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cs/Possible.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cs/entity/Ball.java" afterDir="false" />
+    <list default="true" id="45642a29-0926-4c0f-8e6a-d520955366c1" name="Changes" comment="完成概率写入">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cs/Save.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cs/Caculate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cs/Caculate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cs/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cs/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cs/Possible.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cs/Possible.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cs/Public.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cs/Public.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cs/Query.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cs/Query.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cs/Write.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cs/Write.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cs/entity/Ball.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cs/entity/Ball.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,31 +66,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "E:/Code/Shenzhen/agcimlg/agcim-lg",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "onboarding.tips.debug.path": "E:/Code/Tianm/Tianm/src/main/java/com/cs/Main.java",
-    "project.structure.last.edited": "Global Libraries",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.30114943",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/Code/Shenzhen/agcimlg/agcim-lg&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;E:/Code/Tianm/Tianm/src/main/java/com/cs/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Global Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.30114943&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.annotationProcessors&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
-  <component name="RunManager">
+}</component>
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.cs.Main" />
       <module name="Tianm.main" />
@@ -104,8 +104,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Save" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.cs.Save" />
+      <module name="Tianm.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cs.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Save" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -122,7 +136,8 @@
       <workItem from="1691634982370" duration="358000" />
       <workItem from="1691716610268" duration="991000" />
       <workItem from="1691718840315" duration="18881000" />
-      <workItem from="1691975976934" duration="18884000" />
+      <workItem from="1691975976934" duration="23181000" />
+      <workItem from="1692066628682" duration="12407000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <created>1691633338060</created>
@@ -187,7 +202,14 @@
       <option name="project" value="LOCAL" />
       <updated>1691976557617</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="完成概率写入">
+      <created>1692007491440</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1692007491440</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -210,6 +232,15 @@
     <MESSAGE value="初步实现数据库查询" />
     <MESSAGE value="优化查询" />
     <MESSAGE value="可以插入往期数据" />
-    <option name="LAST_COMMIT_MESSAGE" value="可以插入往期数据" />
+    <MESSAGE value="完成概率写入" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成概率写入" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="GradleRunConfiguration">
+        <watch expression="(1 - poss)" />
+        <watch expression="(1 - poss) * (1 / 27)" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

@@ -10,7 +10,13 @@ import java.util.UUID;
 
 public class Write {
 
-    public void save(Map<String, List<Ball>> rb) {
+    int[] nums;
+
+    public Write(int[] nums) {
+        this.nums = nums;
+    }
+
+    public synchronized void save() {
         try {
             // 加载JDBC驱动
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -19,9 +25,9 @@ public class Write {
             Connection connection = DriverManager.getConnection(DBConfig.URL, DBConfig.USER, DBConfig.PWD);
 
             //插入球值
-            insert(connection, Public.NUMS);
+            insert(connection);
             //更新概率
-
+            update(connection);
 
             // 关闭资源
             connection.close();
@@ -30,7 +36,7 @@ public class Write {
         }
     }
 
-    private void insert(Connection coon, int[] nums) {
+    private void insert(Connection coon) {
         try {   // 要执行的插入语句
             String insertQuery = "";
             String uid = UUID.randomUUID().toString();
@@ -56,15 +62,18 @@ public class Write {
         }
     }
 
-    private void update(Connection coon, Map<String, List<Ball>> rb) {
+    private void update(Connection coon) {
+        Query Q = new Query();
+        Possible P = new Possible();
+        Map<String, List<Ball>> rb = P.CacuPoss(Q.queryRB(), nums);
         List<Ball> red = rb.get("red");
         List<Ball> blue = rb.get("blue");
         try {   // 要执行的插入语句
             String updateQuery = "";
             for (Ball b : red) {
-                updateQuery = "UPDATE cs_prob_red"
+                updateQuery = "UPDATE cs_prob_red "
                         + "SET cs_poss = " + b.getCsPoss() + ", cs_count = " + b.getCsCount() + ", cs_ratio = " + b.getCsRatio()
-                        + "WHERE cs_num = " + b.getCsNum();
+                        + " WHERE cs_num = " + b.getCsNum();
 
                 // 创建PreparedStatement对象
                 PreparedStatement statement = coon.prepareStatement(updateQuery);
@@ -81,9 +90,9 @@ public class Write {
                 statement.close();
             }
             for (Ball b : blue) {
-                updateQuery = "UPDATE cs_prob_blue"
+                updateQuery = "UPDATE cs_prob_blue "
                         + "SET cs_poss = " + b.getCsPoss() + ", cs_count = " + b.getCsCount() + ", cs_ratio = " + b.getCsRatio()
-                        + "WHERE cs_num = " + b.getCsNum();
+                        + " WHERE cs_num = " + b.getCsNum();
 
                 // 创建PreparedStatement对象
                 PreparedStatement statement = coon.prepareStatement(updateQuery);

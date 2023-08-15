@@ -8,7 +8,7 @@ import java.util.*;
 
 public class Query {
 
-    public void qCount() {
+    public synchronized void qCount() {
         String sql = "SELECT COUNT(0) co FROM cs_o_1;";
         try (Connection connection = DriverManager.getConnection(DBConfig.URL, DBConfig.USER, DBConfig.PWD);
              PreparedStatement statementR = connection.prepareStatement(sql);
@@ -16,8 +16,8 @@ public class Query {
         ) {
 
             while (resultSetR.next()) {
-                Integer c = resultSetR.getInt("co");
-                Public.SUM = c;
+                Float c = resultSetR.getFloat("co");
+                Public.SUM = c + 1.0f;
             }
         } catch (SQLException e) {
             // Proper error handling, you can log the exception details or perform other actions here.
