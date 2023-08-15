@@ -17,22 +17,43 @@ public class Write {
     }
 
     public synchronized void save() {
+        Connection connection = null;
+
         try {
             // 加载JDBC驱动
             Class.forName("com.mysql.cj.jdbc.Driver");
 
             // 建立数据库连接
-            Connection connection = DriverManager.getConnection(DBConfig.URL, DBConfig.USER, DBConfig.PWD);
+            connection = DriverManager.getConnection(DBConfig.URL, DBConfig.USER, DBConfig.PWD);
+
+            //关闭自动提交
+            connection.setAutoCommit(false);
 
             //插入球值
             insert(connection);
             //更新概率
             update(connection);
 
-            // 关闭资源
-            connection.close();
+            //提交事务
+            connection.commit();
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
+            if (connection != null) {
+                try {
+                    connection.rollback();
+                } catch (SQLException ex) {
+                    ex.printStackTrace();
+                }
+            }
+        } finally {
+            // 关闭连接
+            if (connection != null) {
+                try {
+                    connection.close();
+                } catch (SQLException ex) {
+                    ex.printStackTrace();
+                }
+            }
         }
     }
 
