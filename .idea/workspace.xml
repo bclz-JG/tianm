@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="45642a29-0926-4c0f-8e6a-d520955366c1" name="Changes" comment="完成">
+    <list default="true" id="45642a29-0926-4c0f-8e6a-d520955366c1" name="Changes" comment="完成事务&#10;+">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cs/Caculate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cs/Caculate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cs/Save.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cs/Save.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cs/Write.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cs/Write.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +84,7 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected="Application.Save">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.cs.Main" />
       <module name="Tianm.main" />
@@ -131,7 +131,9 @@
       <workItem from="1691716610268" duration="991000" />
       <workItem from="1691718840315" duration="18881000" />
       <workItem from="1691975976934" duration="23181000" />
-      <workItem from="1692066628682" duration="15853000" />
+      <workItem from="1692066628682" duration="17293000" />
+      <workItem from="1692602493534" duration="1315000" />
+      <workItem from="1693475622827" duration="329000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <created>1691633338060</created>
@@ -210,7 +212,14 @@
       <option name="project" value="LOCAL" />
       <updated>1692087826612</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="完成事务">
+      <created>1692093943154</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1692093943154</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -235,7 +244,8 @@
     <MESSAGE value="可以插入往期数据" />
     <MESSAGE value="完成概率写入" />
     <MESSAGE value="完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成" />
+    <MESSAGE value="完成事务" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成事务" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

@@ -12,6 +12,7 @@ public class Caculate {
         List<Ball> blue = rb.get("blue");
 
         List<Integer> r = this.queryRed(red);
+        Collections.sort(r);
         Integer b = this.queryBlue(blue);
 
         List<Integer> v = new ArrayList<>(r);

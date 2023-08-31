@@ -3,7 +3,7 @@ package com.cs;
 public class Save {
 
     static Query Q = new Query();
-    static Write W = new Write(new int[]{1, 2, 3, 4, 5, 6, 1});
+    static Write W = new Write(new int[]{5, 6, 12, 15, 23, 25, 4});
 
     public static void main(String[] args) {
 
